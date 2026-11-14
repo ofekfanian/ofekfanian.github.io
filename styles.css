@@ -171,7 +171,8 @@ button { font: inherit; color: inherit; }
   :root:not([data-theme="light"]) .icon-sun { display: none; }
   :root:not([data-theme="light"]) .icon-moon { display: block; }
 }
-@media (max-width: 860px) {
+/* Full menu fits from ~680px, so tablets (iPad mini 744px and up) keep it; phones get the ☰ menu */
+@media (max-width: 719px) {
   .nav { padding: 8px 8px 0; }
   .nav__inner { position: relative; }
   .menu-toggle { display: grid; }
@@ -227,6 +228,11 @@ button { font: inherit; color: inherit; }
 }
 .hero__role em { display: inline-block; font-style: normal; color: var(--ink); background: linear-gradient(transparent 62%, color-mix(in srgb, var(--accent) 28%, transparent) 62%); }
 .hero__lead { margin-top: 22px; max-width: 560px; font-size: 17.5px; line-height: 1.65; color: var(--ink-2); }
+/* Phones held sideways: keep the heading from filling the whole short screen */
+@media (orientation: landscape) and (max-height: 500px) {
+  .hero { padding-top: calc(72px + 28px); }
+  .hero__title { margin-top: 18px; font-size: clamp(40px, 6.4vw, 64px); }
+}
 .hero__cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
 .socials { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 26px; }
 .social { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-3); text-decoration: none; font-family: var(--mono); }
