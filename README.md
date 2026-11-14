@@ -27,18 +27,14 @@ Both options below are free and serve the folder as-is. Pick one.
 
 ### Live site
 
-Deployed with GitHub Pages at **https://ofekfanian.github.io** (repo `ofekfanian/ofekfanian.github.io`, branch `main`, root folder).
+Live at **https://ofekfanian.com** (also https://www.ofekfanian.com). Hosted on GitHub Pages: repo `ofekfanian/ofekfanian.github.io`, branch `main`, root folder.
+The domain is registered at Cloudflare (renews yearly). Its DNS has four `A` records for `@` (185.199.108.153, .109.153, .110.153, .111.153) and a `CNAME` for `www` pointing to `ofekfanian.github.io`, all set to **DNS only** (grey cloud). The `CNAME` file in this folder tells GitHub Pages which domain to serve; keep it.
+
 To update the site, commit and push: Pages redeploys within a minute or two.
 
 ```bash
 cd ~/Documents/Personal/portfolio
 git add . && git commit -m "Update site" && git push
-```
-
-If you later move to another address (own domain or Vercel), change the two `og:` URLs at the top of `index.html`:
-
-```bash
-sed -i '' 's#ofekfanian.github.io#your-new-domain.com#g' index.html
 ```
 
 ### Option A: GitHub Pages → `https://ofekfanian.github.io`
@@ -77,7 +73,7 @@ Every later `git push` redeploys automatically.
 
 ### Custom domain (optional, either host)
 
-Buy a domain (e.g. `ofekfanian.com`, about $10–15/year), then add it under GitHub **Settings → Pages → Custom domain** or Vercel **Settings → Domains** and follow the DNS records they show. Re-run the `sed` line above with the new domain.
+Already set up for `ofekfanian.com` (see *Live site*). To change it, update the `CNAME` file, the two `og:` URLs at the top of `index.html`, GitHub **Settings → Pages → Custom domain**, and the DNS records.
 
 ## After it's live
 
