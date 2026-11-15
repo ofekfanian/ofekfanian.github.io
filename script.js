@@ -134,4 +134,47 @@
       document.querySelectorAll('.pcard__hint').forEach(function (h) { h.hidden = true; });
     }
   }
+  // Motion polish
+  var pageBar = document.querySelector('.scrollbar i');
+  function progress() {
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    if (pageBar) pageBar.style.setProperty('--p', max > 0 ? Math.min(window.scrollY / max, 1) : 0);
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  window.addEventListener('resize', progress);
+  progress();
+
+  document.querySelectorAll('.pcard').forEach(function (c, i) { c.style.setProperty('--i', i); });
+  document.querySelectorAll('.skill .chips').forEach(function (list) {
+    Array.prototype.forEach.call(list.children, function (c, i) { c.style.setProperty('--i', i); });
+  });
+
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (fine && !reduceMotion) {
+    var hero = document.querySelector('.hero');
+    var spot = document.querySelector('.hero__spot');
+    var visual = document.querySelector('.hero__visual');
+    if (hero && spot) {
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        spot.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        spot.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        if (visual && visual.classList.contains('is-in')) {
+          var dx = (e.clientX - r.left) / r.width - 0.5, dy = (e.clientY - r.top) / r.height - 0.5;
+          visual.style.transform = 'perspective(1100px) rotateY(' + (dx * 8).toFixed(2) + 'deg) rotateX(' + (-dy * 6).toFixed(2) + 'deg)';
+        }
+      });
+      hero.addEventListener('pointerleave', function () { if (visual) visual.style.transform = ''; });
+    }
+    var ptrack = document.getElementById('project-track');
+    if (ptrack) {
+      ptrack.addEventListener('pointermove', function (e) {
+        var card = e.target.closest && e.target.closest('.pcard');
+        if (!card) return;
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--px', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--py', (e.clientY - r.top) + 'px');
+      });
+    }
+  }
 })();

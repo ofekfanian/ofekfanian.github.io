@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=8">
   <script>
     document.documentElement.classList.add('js');
     try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -41,6 +41,7 @@
   </svg>
 
   <a class="skip" href="#main">Skip to content</a>
+  <div class="scrollbar" aria-hidden="true"><i></i></div>
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="top">
@@ -69,50 +70,113 @@
   </header>
 
   <main id="main">
-    <!-- ============ HERO: who I am ============ -->
+    <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__spot" aria-hidden="true"></div>
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <div class="intro reveal">
-            <img class="avatar" src="assets/img/ofek-round.webp" width="320" height="320" alt="">
+            <img class="avatar" src="assets/img/ofek-round.webp" width="320" height="320" alt="Ofek Fanian">
             <p class="badge"><span class="pulse" aria-hidden="true"></span>Open to work</p>
           </div>
           <h1 class="hero__title reveal">
-            Ofek Fanian
+            <span class="rise"><span>Ofek</span> <span>Fanian</span></span>
             <span class="hero__role">AI Software Engineer, <em>Backend, Data &amp; Mobile</em></span>
           </h1>
           <p class="hero__lead reveal">I build complete products end to end, from the database to the app in your hand, with AI where it does real work.</p>
           <div class="hero__cta reveal">
-            <a class="btn btn--dark" href="#projects">See my projects <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
-            <a class="btn btn--ghost" href="mailto:ofekfanian689@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Contact me</a>
+            <a class="btn btn--dark" href="#projects">See my projects
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="mailto:ofekfanian689@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+              Contact me
+            </a>
           </div>
           <div class="socials reveal">
-            <a class="social" href="https://github.com/ofekfanian" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>github.com/ofekfanian</a>
-            <a class="social" href="https://linkedin.com/in/ofek-fanian" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>in/ofek-fanian</a>
+            <a class="social" href="https://github.com/ofekfanian" target="_blank" rel="noopener">
+              <svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.38 7.86 10.9.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+              github.com/ofekfanian
+            </a>
+            <a class="social" href="https://linkedin.com/in/ofek-fanian" target="_blank" rel="noopener">
+              <svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+              in/ofek-fanian
+            </a>
           </div>
         </div>
 
-        <figure class="hero__portrait reveal">
-          <img src="assets/img/ofek-portrait.webp" width="760" height="930" alt="Portrait of Ofek Fanian">
-          <figcaption class="float float--a"><b>98%</b> ML accuracy</figcaption>
-          <figcaption class="float float--b"><b>3NF</b> PostgreSQL</figcaption>
-          <figcaption class="float float--c"><b>LLM</b> iOS tutor</figcaption>
-        </figure>
+        <div class="hero__visual reveal" role="img" aria-label="Screens from three of my apps: Hunter, SpotOn and Mingler">
+          <figure class="device device--back-left">
+            <img src="assets/img/hunter-dashboard.webp" width="420" height="910" alt="">
+            <figcaption class="tag"><span class="tag__dot tag__dot--green"></span>Hunter · Android</figcaption>
+          </figure>
+          <figure class="device device--front">
+            <img src="assets/img/spoton-tutor.webp" width="339" height="710" alt="">
+            <figcaption class="tag tag--accent"><span class="tag__dot"></span>SpotOn · LLM tutor</figcaption>
+          </figure>
+          <figure class="device device--back-right">
+            <img src="assets/img/mingler-create.webp" width="294" height="640" alt="">
+            <figcaption class="tag"><span class="tag__dot tag__dot--gold"></span>Mingler · iOS</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Tech strip -->
+      <div class="marquee" aria-label="Technologies I work with">
+        <div class="marquee__track">
+          <ul class="marquee__list">
+            <li><img src="assets/icons/swift.svg" alt="" width="22" height="22">Swift</li>
+            <li><img src="assets/icons/kotlin.svg" alt="" width="22" height="22">Kotlin</li>
+            <li><img src="assets/icons/python.svg" alt="" width="22" height="22">Python</li>
+            <li><img src="assets/icons/firebase.svg" alt="" width="22" height="22">Firebase</li>
+            <li><img src="assets/icons/apple.svg" alt="" width="22" height="22" class="mono">SwiftUI &amp; UIKit</li>
+            <li><img src="assets/icons/android.svg" alt="" width="22" height="22">Android SDK</li>
+            <li><img src="assets/icons/scikitlearn.svg" alt="" width="22" height="22">scikit-learn</li>
+            <li><img src="assets/icons/java.svg" alt="" width="22" height="22">Java</li>
+            <li><img src="assets/icons/javascript.svg" alt="" width="22" height="22">JavaScript</li>
+            <li><img src="assets/icons/nodejs.svg" alt="" width="22" height="22">Node.js</li>
+            <li><img src="assets/icons/postgresql.svg" alt="" width="22" height="22">PostgreSQL</li>
+            <li><img src="assets/icons/unity.svg" alt="" width="22" height="22" class="mono">Unity</li>
+            <li><img src="assets/icons/docker.svg" alt="" width="22" height="22">Docker</li>
+            <li><img src="assets/icons/git.svg" alt="" width="22" height="22">Git</li>
+          </ul>
+          <ul class="marquee__list" aria-hidden="true">
+            <li><img src="assets/icons/swift.svg" alt="" width="22" height="22">Swift</li>
+            <li><img src="assets/icons/kotlin.svg" alt="" width="22" height="22">Kotlin</li>
+            <li><img src="assets/icons/python.svg" alt="" width="22" height="22">Python</li>
+            <li><img src="assets/icons/firebase.svg" alt="" width="22" height="22">Firebase</li>
+            <li><img src="assets/icons/apple.svg" alt="" width="22" height="22" class="mono">SwiftUI &amp; UIKit</li>
+            <li><img src="assets/icons/android.svg" alt="" width="22" height="22">Android SDK</li>
+            <li><img src="assets/icons/scikitlearn.svg" alt="" width="22" height="22">scikit-learn</li>
+            <li><img src="assets/icons/java.svg" alt="" width="22" height="22">Java</li>
+            <li><img src="assets/icons/javascript.svg" alt="" width="22" height="22">JavaScript</li>
+            <li><img src="assets/icons/nodejs.svg" alt="" width="22" height="22">Node.js</li>
+            <li><img src="assets/icons/postgresql.svg" alt="" width="22" height="22">PostgreSQL</li>
+            <li><img src="assets/icons/unity.svg" alt="" width="22" height="22" class="mono">Unity</li>
+            <li><img src="assets/icons/docker.svg" alt="" width="22" height="22">Docker</li>
+            <li><img src="assets/icons/git.svg" alt="" width="22" height="22">Git</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- ============ ABOUT ============ -->
     <section class="section section--alt" id="about" aria-labelledby="about-title">
       <div class="wrap about">
+        <figure class="portrait reveal">
+          <img src="assets/img/ofek-portrait.webp" width="760" height="930" alt="Portrait of Ofek Fanian" loading="lazy">
+          <figcaption><strong>Ofek Fanian</strong><span>AI Software Engineer</span></figcaption>
+        </figure>
+        <div class="about__main">
         <div class="about__copy reveal">
           <p class="eyebrow"><span>01</span> About</p>
-          <h2 id="about-title">I own what I build, from the first table to the last screen</h2>
+          <h2 id="about-title">I own what I build, from the first screen to deployment</h2>
           <p>I'm completing a B.Sc. in Computer Science at Afeka College. I've integrated LLMs, speech recognition and Vision into mobile apps, trained ML models for NLP classification, and designed normalized SQL databases.</p>
-          <p>I'm open to roles in AI, backend, data or mobile.</p>
+          <p>I'm open to roles in AI, backend, data or mobile. I work in Hebrew and English.</p>
         </div>
-        <aside class="facts reveal" aria-label="Quick facts">
-          <h3 class="facts__label">Education</h3>
+        <div class="about__side reveal">
+          <h3 class="about__label">Education</h3>
           <ol class="timeline">
             <li>
               <span class="timeline__date">2024 – Present</span>
@@ -125,10 +189,8 @@
               <span>Afeka College of Engineering, Tel Aviv</span>
             </li>
           </ol>
-          <dl class="facts__list">
-            <div><dt>Languages</dt><dd>Hebrew, English</dd></div>
-          </dl>
-        </aside>
+        </div>
+        </div>
       </div>
     </section>
 
@@ -482,30 +544,31 @@
           <p class="eyebrow"><span>03</span> Skills</p>
           <h2 id="skills-title">My toolkit</h2>
         </header>
-        <div class="skillset reveal">
-          <div class="skillrow">
-            <h3>Languages</h3>
-            <ul class="chips">
-              <li><img src="assets/icons/java.svg" alt="" width="16" height="16">Java</li>
-              <li><img src="assets/icons/python.svg" alt="" width="16" height="16">Python</li>
-              <li>SQL</li>
-              <li><img src="assets/icons/kotlin.svg" alt="" width="16" height="16">Kotlin</li>
-              <li><img src="assets/icons/swift.svg" alt="" width="16" height="16">Swift</li>
-              <li><img src="assets/icons/javascript.svg" alt="" width="16" height="16">JavaScript (Node.js)</li>
-              <li><img src="assets/icons/csharp.svg" alt="" width="16" height="16">C#</li>
-              <li><img src="assets/icons/c.svg" alt="" width="16" height="16">C</li>
-            </ul>
-          </div>
-          <div class="skillrow">
-            <h3>AI &amp; ML</h3>
+
+        <div class="skills">
+          <div class="skill skill--ai reveal">
+            <h3>AI &amp; Machine Learning</h3>
             <ul class="chips">
               <li>LLM integration</li><li>Speech Recognition</li><li>Apple Vision</li>
               <li><img src="assets/icons/scikitlearn.svg" alt="" width="16" height="16">scikit-learn</li>
               <li><img src="assets/icons/pandas.svg" alt="" width="16" height="16" class="mono">pandas</li>
-              <li>NLP</li>
+              <li>NLP · Naive Bayes · Bag-of-Words</li>
             </ul>
           </div>
-          <div class="skillrow">
+          <div class="skill reveal">
+            <h3>Languages</h3>
+            <ul class="chips">
+              <li><img src="assets/icons/python.svg" alt="" width="16" height="16">Python</li>
+              <li><img src="assets/icons/javascript.svg" alt="" width="16" height="16">JavaScript (Node.js)</li>
+              <li><img src="assets/icons/kotlin.svg" alt="" width="16" height="16">Kotlin</li>
+              <li><img src="assets/icons/java.svg" alt="" width="16" height="16">Java</li>
+              <li><img src="assets/icons/swift.svg" alt="" width="16" height="16">Swift</li>
+              <li><img src="assets/icons/c.svg" alt="" width="16" height="16">C</li>
+              <li><img src="assets/icons/csharp.svg" alt="" width="16" height="16">C#</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill reveal">
             <h3>Mobile</h3>
             <ul class="chips">
               <li><img src="assets/icons/android.svg" alt="" width="16" height="16">Android SDK</li>
@@ -513,10 +576,10 @@
               <li><img src="assets/icons/firebase.svg" alt="" width="16" height="16">Firebase</li>
               <li>Google Play Services</li>
               <li><img src="assets/icons/apple.svg" alt="" width="16" height="16" class="mono">SwiftUI</li>
-              <li>UIKit</li><li>CoreLocation</li>
+              <li>UIKit</li><li>Storyboard</li><li>CoreLocation</li>
             </ul>
           </div>
-          <div class="skillrow">
+          <div class="skill reveal">
             <h3>Tools</h3>
             <ul class="chips">
               <li><img src="assets/icons/git.svg" alt="" width="16" height="16">Git</li>
@@ -524,10 +587,11 @@
               <li><img src="assets/icons/linux.svg" alt="" width="16" height="16">Linux</li>
               <li><img src="assets/icons/androidstudio.svg" alt="" width="16" height="16">Android Studio</li>
               <li><img src="assets/icons/xcode.svg" alt="" width="16" height="16">Xcode</li>
-              <li><img src="assets/icons/unity.svg" alt="" width="16" height="16" class="mono">Unity</li>
+              <li><img src="assets/icons/gradle.svg" alt="" width="16" height="16" class="mono">Gradle</li>
+              <li><img src="assets/icons/unity.svg" alt="" width="16" height="16" class="mono">Unity (URP)</li>
             </ul>
           </div>
-          <div class="skillrow">
+          <div class="skill reveal">
             <h3>Foundations</h3>
             <ul class="chips">
               <li>OOP</li><li>Data Structures &amp; Algorithms</li><li>Relational Database Design</li><li>Computer Networks</li>
@@ -546,7 +610,10 @@
           <h2 id="contact-title">Let's build something together.</h2>
           <p class="cta__text">I'm open to roles in AI, backend, data or mobile. The fastest way to reach me is email or LinkedIn.</p>
           <div class="cta__actions">
-            <a class="btn btn--accent" href="mailto:ofekfanian689@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>ofekfanian689@gmail.com</a>
+            <a class="btn btn--accent" href="mailto:ofekfanian689@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+              ofekfanian689@gmail.com
+            </a>
             <a class="btn btn--outline-light" href="https://linkedin.com/in/ofek-fanian" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn--outline-light" href="https://github.com/ofekfanian" target="_blank" rel="noopener">GitHub</a>
           </div>
@@ -574,6 +641,6 @@
     <div class="dlg__content"></div>
   </dialog>
 
-  <script src="script.js?v=3" defer></script>
+  <script src="script.js?v=6" defer></script>
 </body>
 </html>
