@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
   <script>
     document.documentElement.classList.add('js');
     try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
@@ -258,6 +258,39 @@
                   </ul>
                   <ul class="stack" aria-label="Tech stack"><li>Swift</li><li>SwiftUI</li><li>LLM</li><li>Speech</li><li>Vision</li><li>Firebase</li></ul>
                   <a class="btn btn--dark" href="https://github.com/ofekfanian/SpotOn" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>View code on GitHub</a>
+                </div>
+              </template>
+            </li>
+
+            <!-- PhishGuard -->
+            <li class="pcard" data-tags="backend data">
+              <div class="pcard__visual v-shot" aria-hidden="true">
+                <img src="assets/img/phishguard-dashboard.webp" width="800" height="507" alt="" loading="lazy">
+              </div>
+              <div class="pcard__body">
+                <div class="pcard__meta"><span class="pill">Backend · Security</span><span>2026</span></div>
+                <h3><button class="pcard__open" type="button">PhishGuard</button></h3>
+                <p>Real-time detection of domains that impersonate well-known brands.</p>
+                <div class="pcard__foot">
+                  <span class="pcard__hint"><svg aria-hidden="true"><use href="#i-plus"/></svg>Details</span>
+                  <a class="link" href="https://github.com/ofekfanian/phishguard" target="_blank" rel="noopener">Code <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+                </div>
+              </div>
+              <template class="pcard__details">
+                <div class="dlg__visual v-shot">
+                  <img src="assets/img/phishguard-dashboard.webp" width="800" height="507" alt="PhishGuard dashboard running on live data">
+                </div>
+                <div class="dlg__body">
+                  <div class="pcard__meta"><span class="pill">Backend · Security</span><span>2026</span></div>
+                  <h2 class="dlg__title">PhishGuard</h2>
+                  <p>Real-time detection of domains that impersonate well-known brands, built on public Certificate Transparency logs.</p>
+                  <ul class="bullets">
+                    <li>Follows 14 public CT logs directly and gives each newly certified domain a 0-100 score with a written reason for every point</li>
+                    <li>Catches digit swaps, homoglyphs and typosquatting, and adjusts the score by domain age looked up over RDAP</li>
+                    <li>FastAPI REST API and a live dashboard, with 51 automated tests run on GitHub Actions</li>
+                  </ul>
+                  <ul class="stack" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>asyncio</li><li>SQLAlchemy</li><li>pytest</li></ul>
+                  <a class="btn btn--dark" href="https://github.com/ofekfanian/phishguard" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>View code on GitHub</a>
                 </div>
               </template>
             </li>
